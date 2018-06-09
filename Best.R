@@ -1,8 +1,8 @@
 best <- function(state, outcome)
 {
-  setwd("/Users/parthajmera/Desktop/Data Science/RCourse2/rprog-data-ProgAssignment3-data/")
-  state <- "TX"
-  outcome <- "heart attack"
+  setwd("/Users/parthajmera/Documents/GitHub/Comparing-Hospitals/")
+  #state <- "TX"
+  #outcome <- "heart attack"
   
   ##Read Data
   
@@ -30,7 +30,7 @@ best <- function(state, outcome)
     which_Rows_Have_State_Needed <- which(betterData[ , "state"] == state)
     
   
-    betterStateData <- betterData[which_Row_Have_State_Needed, ]    # extracting data for the called state
+    betterStateData <- betterData[which_Rows_Have_State_Needed, ]    # extracting data for the called state
     
     
     #Since data has text "Not Available", it will coerce Numerical values to text as well. So we convert it into numerics
@@ -44,8 +44,6 @@ best <- function(state, outcome)
     
     output  <- result[order(result)]
     
-    result
-    
-    output
+    return(output)
   
 }
